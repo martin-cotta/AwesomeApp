@@ -1,7 +1,9 @@
 language: objective-c
 osx_image: xcode10.1
+before_install:
+  - gem update --system
+  - gem install bundler
 install:
-  - brew install ruby
   - bundle install
 script:
   - fastlane beta
