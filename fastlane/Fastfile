@@ -9,7 +9,7 @@ platform :ios do
   lane :beta do
     build_app(
       scheme: "AwesomeApp", 
-      workspace: "ios/AwesomeApp.xcworkspace", 
+      project: "ios/AwesomeApp.xcodeproj", 
       include_bitcode: false)
   end
 end
