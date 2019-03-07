@@ -1,10 +1,15 @@
 opt_out_usage
 
+setup_travis if is_ci?
+
 default_platform(:ios)
 
 platform :ios do
-  desc "Description of what the lane does"
+  desc "Building iOS App"
   lane :beta do
-    UI.success "This is Awesome!"
+    build_app(
+      scheme: "AwesomeApp", 
+      workspace: "ios/AwesomeApp.xcworkspace", 
+      include_bitcode: false)
   end
 end
