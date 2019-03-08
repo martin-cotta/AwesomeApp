@@ -1,5 +1,8 @@
 language: objective-c
 osx_image: xcode10.1
+env:
+  global:
+    - secure: "N87vvud+icfYkhFj/K+FEfmdh8Q4nyjdizB4HP+d9rZ1RI5ZyQXtzhk1h4YN7hkKyBZZ20rEaoTsPfxQis9pEy7SBWm5l/4iR2g65vtCDSShGYNq4X+6XF4MPb9FUaStpXAu4cAmskOoE1O0YsCOs/zrb15JehYrrQGfOdq14qBA936Nes77FaSFRvH7xKffOk6Uv+7D+3/8AozdxpX1HfEqhlshungmeu+7zzJDSYwAog8+IB21QmpCOFjQjqKFuddwXRBXsjZlXRThmzb2cOzMiDy3XRGO/UN+x/SIJBf43zUAqfgif+x67bC/o9bn7n+HWDHn1J/sGg15ccs2G02l92IbUFheFuLpUvJbBEWHuYwBfHSbzZ3l27ZlrU85Bby1obrhqLenbZQIjVKb1yaVAH2hX3Y7qh/LVxMsypx7HkcveUtnzsF6lT0QIyUWQP2690vD/NTSLyIFIMvbymhESpnHX/60G4lbFOihTqSr8fBvziDtfBsW/jSV14Yd6YCp7zz3/FojVxZ9dOSqUnhnio03Dx3qP68tCHl3P4repqOAA9ciephl+wpBfEmJCu1uemW860VQKTluqbRIHr3Kv+OkEI/UlhDmtKLE9dvnVrSWpsjSI/7lE3ZETFge9U/TeTzWHnef8zN2jVky5xNS1xbCX6gT1CcfRX7P7us="
 cache:
   - bundler
   - cocoapods
@@ -7,7 +10,7 @@ before_install:
   - gem update --system
   - gem install bundler
 install:
-  - bundle install
+  # - bundle install
 script:
   - fastlane beta
 
